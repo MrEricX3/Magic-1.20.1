@@ -25,7 +25,7 @@ public class MagicalMod
     // Define mod id in a common place for everything to reference
     public static final String MODID = "magicalmod";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     public MagicalMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -40,7 +40,7 @@ public class MagicalMod
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
-      
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
